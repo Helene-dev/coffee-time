@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+    
+    <header class="header">
+        <div class="header-left">
+
+            <div class="logo">COFFEE TIME</div>
+        </div>
+        <div class="header-right">
+            <nav class="navbar">
+                <ul class="nav-menu hidden" id="navMenu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div id="burger" class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                 <button class="mobile-menu" id="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECTION ACCUEIL -->
+    <section id="accueil" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">COFFEE TIME</h1>
+            <div class="typewriter" id="typewriter"></div>
+            <a href="#menu" class="cta-button">Découvrir nos Cafés</a>
+        </div>
+    </section>
+    <!-- SECTION À PROPOS -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <h2 class="section-title">À Propos de Nous</h2>
+                <p class="about-text">
+                    Chez COFFEE TIME, nous sommes passionnés par l'art du café depuis plus de 15 ans. 
+                    Nous sélectionnons soigneusement nos grains des meilleures plantations du monde 
+                    pour vous offrir une expérience gustative unique et authentique.
+                </p>
+                <p class="about-text">
+                    Notre équipe de baristas experts torréfie chaque grain avec précision pour révéler 
+                    tous les arômes et saveurs qui font la richesse du café. Venez découvrir notre 
+                    univers chaleureux et laissez-vous transporter par nos créations uniques.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION SERVICES -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title fade-in">Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <i class="fas fa-coffee service-icon"></i>
+                    <h3 class="service-title">Café Premium</h3>
+                    <p>Sélection des meilleurs grains du monde, torréfiés sur place pour un goût exceptionnel.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-leaf service-icon"></i>
+                    <h3 class="service-title">Bio & Équitable</h3>
+                    <p>Engagement pour un commerce équitable et des produits biologiques respectueux de l'environnement.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-clock service-icon"></i>
+                    <h3 class="service-title">Service Rapide</h3>
+                    <p>Préparation express de vos boissons préférées sans compromettre la qualité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- SECTION MENU - DISPOSITION ESCALIER -->
+    <section id="menu" class="section menu">
+        <div class="container">
+            <h2 class="section-title fade-in">Notre Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    
+                    <img src="Lovely coffee.jpeg" alt="">
+                    <div class="menu-content">
+                        <h3 class="menu-title">Espresso Classique</h3>
+                        <p class="menu-description">
+                            Un concentré de saveurs intenses avec des notes chocolatées et une crème onctueuse. 
+                            Préparé avec notre mélange signature de grains arabica sélectionnés.
+                        </p>
+                        <div class="menu-price">3,50 €</div>
+                    </div>
+                </div>
+                 <div class="menu-item">
+                   
+                    <img src="chaudcafe.jpeg" alt="">
+                    <div class="menu-content">
+                        <h3 class="menu-title">Cappuccino Artisanal</h3>
+                        <p class="menu-description">
+                            L'équilibre parfait entre espresso corsé et mousse de lait veloutée, saupoudré de cacao. 
+                            Une expérience crémeuse et réconfortante.
+                        </p>
+                        <div class="menu-price">4,20 €</div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    
+                    <img src="Latte Macchiato Recipe for Home Baristas.jpeg" alt="">
+                    <div class="menu-content">
+                        <h3 class="menu-title">Latte Art Signature</h3>
+                        <p class="menu-description">
+                            Notre spécialité maison avec un design unique dans chaque tasse. 
+                            Café doux mélangé à un lait parfaitement texturé pour une dégustation visuelle et gustative.
+                        </p>
+                        <div class="menu-price">4,80 €</div>
+                    </div>
+                </div>
+                 <div class="menu-item">
+                    
+                    <img src="heartcafé.jpeg" alt="">
+                    <div class="menu-content">
+                        <h3 class="menu-title">Cold Brew Glacé</h3>
+                        <p class="menu-description">
+                            Extraction à froid pendant 24h pour révéler des arômes subtils et une douceur naturelle. 
+                            Servi avec des glaçons et une pointe de sirop au choix.
+                        </p>
+                        <div class="menu-price">5,20 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION RÉSERVATION -->
+    <section id="reservation" class="section reservation">
+        <div class="container">
+            <h2 class="section-title fade-in">Réservation</h2>
+            <form class="reservation-form fade-in" id="reservationForm">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="people">Nombre de personnes</label>
+                    <select id="people" name="people" required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="1">1 personne</option>
+                        <option value="2">2 personnes</option>
+                        <option value="3">3 personnes</option>
+                        <option value="4">4 personnes</option>
+                        <option value="5">5 personnes</option>
+                        <option value="6+">6+ personnes</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Réserver une table</button>
+                  </form>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>123 Rue des Cafés<br>75001 Paris, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+33 1 23 45 67 89</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@coffeetime.fr</p>
+                        </div>
+                          </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <h4>Horaires</h4>
+                            <p>Lun-Ven: 7h-20h<br>Sam-Dim: 8h-22h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map fade-in">
+                    <!-- REMPLACER PAR VOTRE CARTE GOOGLE MAPS ICI -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615674084!3d48.85837007928757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1635789012345!5m2!1sen!2sfr" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025 COFFEE TIME. Tous droits réservés. | <a href="#" style="color: var(--color-orange);">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html> 
