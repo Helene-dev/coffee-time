@@ -7,7 +7,7 @@
             if (i < typewriterText.length) {
                 typewriterElement.innerHTML += typewriterText.charAt(i);
                 i++;
-                setTimeout(typeWriter, 50); // Vitesse d'écriture (50ms par caractère)
+                setTimeout(typeWriter, 50); 
             }
         }
 
