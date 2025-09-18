@@ -5,6 +5,7 @@
             --color-white: #ffffff;
             --color-light-coffee: #8b6f47;
             --color-black-coffee: rgb(56, 31, 1);
+            --header-height: 80px;
         }
 
         /* RESET ET BASE */
@@ -37,32 +38,17 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            display: flex;
-            transition: all 0.3s ease;
-        }
-
-        .header-left {
-            background: var(--color-coffee);
-            padding: 1rem 2rem;
-            flex: 1;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--color-white);
             
+            transition: all 0.3s ease;
         }
 
         .header-right {
             background: var(--color-black);
-            padding: 1rem 2rem;
-            flex: 2;
+            padding: 15px 20px;
+            height: 60px;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: space-between;
         }
 
         .nav-menu {
@@ -98,15 +84,39 @@
             width: 100%;
         }
 
-        /* MENU MOBILE */
-        .mobile-menu {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--color-white);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+       .burger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        border: none;
+        background: none;
+        padding: 0;
+       }
+
+       .burger span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 3px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+       }
+
+       .burger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+       }
+
+       .burger.active span:nth-child(2) {
+        opacity: 0;
+       }
+
+       .burger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+       }
+
+       .nav-overlay {
+        display: none;
+       }
 
         /* Hero Section */
         /* SECTION ACCUEIL */
@@ -349,7 +359,6 @@
         .menu-image {
             flex: 1;
             height: 300px;
-            /* REMPLACER PAR VOS IMAGES DE CAFÉ ICI */
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%236f4e37" width="400" height="300"/><text x="200" y="150" font-family="Arial" font-size="20" fill="%23ffffff" text-anchor="middle" dominant-baseline="middle">IMAGE CAFÉ</text></svg>');
             background-size: cover;
             background-position: center;
@@ -561,16 +570,112 @@
         }
 
         /* Responsive  */
+
+@media  screen and (max-width: 1024px) {
+    .burger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--color-purple);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 100px 0 20px;
+        gap: 0;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        z-index: 1001;
+    }
+
+    .nav-menu.show {
+        right: 0;
+    }
+    
+    .nav-link {
+        border-radius: 10px;
+    }
+
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        display: block;
+      }
+      
+      .nav-overlay.show {
+        opacity: 1;
+        visibility: visible;
+      }
+}
+
+
         @media (max-width: 768px) {
-            .header {width: 10px;
+            :root {
+                --header-height: 70px;
             }
+           
             .header-container {
                 flex-direction: column-reverse;
                 gap: 1rem;
             }
 
             .nav-menu {
-                gap: 1rem;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: var(--color-coffee);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+                padding: 100px 0 20px;
+                gap: 0;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+                z-index: 1001;
+            }
+
+            .nav-menu.show {
+                right: 0;
+            }
+      
+            .nav-link {
+                border-radius: 10;
+            }
+      
+            .nav-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                display: block;
+            }
+      
+            .nav-overlay.show {
+                opacity: 1;
+                visibility: visible;
             }
 
             .hero-content h1 {
@@ -581,10 +686,47 @@
                 font-size: 1.2rem;
             }
 
+            .presentation  p {
+                font-size: 20px;
+                color: white;
+                font-style: italic;
+            }
+
+            .services {
+                background: linear-gradient(to bottom, var(--color-black), var(--color-light-coffee));
+            }
+           .services h2 {
+            font-size: 40px;
+           }
+
+           .menu {
+            background: linear-gradient(to bottom, rgb(194, 160, 89), rgb(129, 86, 5));
+           }
+           .menu h2 {
+            font-size: 40px;
+           }
             .menu-item {
                 flex-direction: column !important;
                 text-align: center;
                 gap: 1.5rem;
+            }
+
+            .menu-items {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+
+            .menu-item h3{
+                font-size: 20px;
+            }
+
+            .menu-item p {
+                font-size: 15px;
+            }
+            .menu img {
+                height: 90px;
+                width: 90px;
             }
 
             .services-grid {
@@ -594,5 +736,54 @@
             .section {
                 padding-left: 1rem;
                 padding-right: 1rem;
+            }
+
+            .reservation {
+                background: rgb(12, 11, 11);
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+
+            :root {
+                --header-height: 60px;
+            }
+
+            .nav-menu {
+                width: 90%;
+                padding-top: 80px;
+            }
+
+            .contact h2 {
+                font-size: 23px;
+            }
+
+            .contact p {
+                font-size: 10px;
+            }
+
+            .map {
+                height: 150px;
+                width: 310px;
+            }
+
+            .reservation h2 {
+                font-size: 23px;
+            }
+
+            .services h2 {
+                font-size: 23px;
+            }
+
+            .menu h2 {
+                font-size: 23px;
+            }
+
+            .presentation h2 {
+                font-size: 23px;
+            }
+
+            .menu-item h3 {
+                color: black;
             }
         }

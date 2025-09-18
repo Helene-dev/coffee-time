@@ -8,24 +8,22 @@
 </head>
 <body>
    <header class="header">
-        <div class="header-left">
-
-            <div class="logo">COFFEE TIME</div>
-        </div>
+        
         <div class="header-right">
-            <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">À propos</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#reservation">Réservation</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <h1>COFFEE TIME</h1>
+            <nav class="nav-bar" aria-label="Navigation principale">
+                <ul class="nav-menu hidden" id="navMenu">
+                    <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                    <li><a href="#apropos" class="nav-link">À propos</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#reservation" class="nav-link">Réservation</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                
-                 <button class="mobile-menu" id="mobileMenu">
-                    <i class="fas fa-bars"></i>
-                </button>
+               <button id="burger" class="burger" aria-label="Menu mobile">
+                <span></span><span></span><span></span>
+               </button> 
+               <div class="nav-overlay" id="navOverlay"></div>  
             </nav>
         </div>
     </header>
