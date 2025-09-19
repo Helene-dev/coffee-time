@@ -750,7 +750,7 @@
             }
 
             .header-right {
-                height: 20px;
+                height: auto;
             }
 
             .header-right h1 {
@@ -758,19 +758,22 @@
 
             }
             .hero {
-                height: 450px;
+                height: 400px;
+                padding: 1rem;
+                text-align: center;
             }
 
             .hero h1 {
-               font-size:28px;
+               font-size:26px;
             }
             .hero .typewriter {
-                font-size: 15px;
+                font-size: 14px;
             }
 
             .cta-button {
-               margin: 10px;
+               margin: 10px auto;
                font-size: 10px;
+               display: block;
             }
 
             .hero-bg {
@@ -786,6 +789,12 @@
         }
 
             .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100%;
+                background: var(--color-coffee);
+                transition: right 0.3s ease;
                 width: 70%;
                 padding-top: 80px;
                 font-size: 15px;
@@ -793,10 +802,18 @@
 
             .section {
                 background: var(--color-coffee);
+                padding: 2rem 1rem;
             }
 
             .section h2 {
                 color: var(--color-black);
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
             }
 
             .burger span {
@@ -806,15 +823,16 @@
                 margin: 2px 0;
                 transition: 0.3s;
                 border-radius: 2px;
-                padding-right: 10px;
+                
             }
 
             .presentation p {
-                font-size: 15px;
+                font-size: 14px;
+                text-align: justify;
             }
            
             .contact h2 {
-                font-size: 23px;
+                font-size: 20px;
             }
 
             .contact p {
@@ -822,8 +840,8 @@
             }
 
             .map {
-                height: 150px;
-                width: 310px;
+                height:180px;
+                width: 100%;
             }
 
             .reservation h2 {
@@ -832,12 +850,13 @@
 
 
             .reservation-form {
-                max-width: 300px;
+                width: 100%;
+                max-width: 320px;
                 margin: 0 auto;
                 background: rgba(15, 15, 15, 0.301);
                 padding: 1rem;
                 border-radius: 15px;
-                backdrop-filter: blur(10px)
+                
             }
 
             .form-group label{
@@ -858,8 +877,8 @@
             }
 
             .services-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+               
+                grid-template-columns:  1fr;
                 gap: 1rem;
                 
             }
