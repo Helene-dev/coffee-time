@@ -751,6 +751,7 @@
 
             .header-right {
                 height: auto;
+                width: 450px;
             }
 
             .header-right h1 {
@@ -842,7 +843,7 @@
 
             .map {
                 height:180px;
-                width: 430px;
+                width: 200px;
             }
 
             .reservation h2 {
@@ -897,6 +898,11 @@
                 color: black;
             }
 
+            .contact-info {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
             .footer h2 {
                 font-size: 15px;
             }
@@ -913,7 +919,7 @@
                 height: 20px;
                 width: 20px;
             }
-            .footer {
-                padding: 20px;
+            .footer-container {
+                padding: 30px;
             }
         }
