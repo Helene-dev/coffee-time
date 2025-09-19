@@ -758,22 +758,23 @@
 
             }
             .hero {
-                height: 400px;
+                height: 350px;
                 padding: 1rem;
                 text-align: center;
             }
 
+
             .hero h1 {
-               font-size:26px;
+               font-size:17px;
             }
             .hero .typewriter {
                 font-size: 14px;
             }
 
             .cta-button {
-               margin: 10px auto;
+              
                font-size: 10px;
-               display: block;
+               
             }
 
             .hero-bg {
@@ -812,7 +813,7 @@
             }
 
             .burger {
-                display: block;
+                margin:  auto 20px;
                 cursor: pointer;
             }
 
@@ -841,11 +842,12 @@
 
             .map {
                 height:180px;
-                width: 100%;
+                width: 430px;
             }
 
             .reservation h2 {
                 font-size: 23px;
+                
             }
 
 
@@ -896,6 +898,22 @@
             }
 
             .footer h2 {
+                font-size: 15px;
+            }
+
+            .footer h3 {
+                font-size: 13px;
+            }
+
+            .footer p {
                 font-size: 10px;
+            }
+
+            .footer img {
+                height: 20px;
+                width: 20px;
+            }
+            .footer {
+                padding: 20px;
             }
         }
